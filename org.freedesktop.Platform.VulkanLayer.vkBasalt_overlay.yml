@@ -54,5 +54,5 @@ modules:
         sed -i 's|"library_path": *"[^"]*"|"library_path": "/usr/lib/extensions/vulkan/vkBasalt_overlay/lib/libvkbasalt-overlay.so"|' "$LAYER_JSON"
     sources:
       - type: git
-        url: https://github.com/YOUR_USERNAME/vkBasalt_overlay.git
+        url: https://github.com/Frank1o3/vkBasalt_overlay.git
         branch: main
