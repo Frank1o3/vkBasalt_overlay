@@ -1,0 +1,25 @@
+name: Flatpak CI
+
+on:
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        container:
+            image: bilelmoussaoui/flatpak-github-actions:freedesktop-25.08
+            options: --privileged
+
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Build Flatpak extension
+              uses: flatpak/flatpak-github-actions/flatpak-builder@v6
+              with:
+                  bundle: vkBasalt_overlay.flatpak
+                  manifest-path: org.freedesktop.Platform.VulkanLayer.vkBasalt_overlay.yml
+                  cache-key: flatpak-builder-${{ github.sha }}
+                  upload-artifact: true
