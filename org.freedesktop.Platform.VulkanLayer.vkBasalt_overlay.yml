@@ -55,4 +55,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/Frank1o3/vkBasalt_overlay.git
-        branch: main
+        branch: master
