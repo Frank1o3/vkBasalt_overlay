@@ -20,6 +20,7 @@ modules:
       - -DCMAKE_BUILD_TYPE=Release
       - -DENABLE_GLSLANG_BINARIES=ON
       - -DENABLE_GLSLANG_JS=OFF
+      - -DENABLE_OPT=0
     cleanup:
       - /include
       - /lib/cmake
