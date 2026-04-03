@@ -34,6 +34,9 @@ modules:
       - -Dwith_so=true
       - -Dwith_json=true
       - -Dappend_libdir_vkbasalt=false
+    build-options:
+      cppflags: -I/usr/lib/extensions/vulkan/vkBasalt_overlay/include
+      cxxflags: -I/usr/lib/extensions/vulkan/vkBasalt_overlay/include
     post-install:
       - |
         LAYER_JSON=/usr/lib/extensions/vulkan/vkBasalt_overlay/share/vulkan/implicit_layer.d/vkBasalt-overlay.json
