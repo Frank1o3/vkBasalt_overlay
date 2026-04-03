@@ -14,21 +14,6 @@ build-options:
     PKG_CONFIG_PATH: /usr/lib/extensions/vulkan/vkBasalt_overlay/lib/pkgconfig
 
 modules:
-  - name: glslang
-    buildsystem: cmake-ninja
-    config-opts:
-      - -DCMAKE_BUILD_TYPE=Release
-      - -DENABLE_GLSLANG_BINARIES=ON
-      - -DENABLE_GLSLANG_JS=OFF
-      - -DENABLE_OPT=0
-    cleanup:
-      - /include
-      - /lib/cmake
-    sources:
-      - type: git
-        url: https://github.com/KhronosGroup/glslang.git
-        tag: 14.3.0
-
   - name: SPIRV-Headers
     buildsystem: cmake-ninja
     config-opts:
